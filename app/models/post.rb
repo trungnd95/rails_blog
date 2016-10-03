@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_many :comments, dependent: :destroy
+  has_many :impressions, as: :impressionable
 
   def all_tags=datas
     self.tags =  datas.split(',').map do |data|
@@ -27,5 +28,13 @@ class Post < ActiveRecord::Base
     else
       comments.to_s + " comments"
     end
+  end
+
+  def impression_count
+    self.impressions.size
+  end
+
+  def uniq_impression_count
+    self.impressions.distinct.count
   end
 end

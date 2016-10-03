@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
+	before_action :log_impression, :only=> [:show]
 
 	def index
 		if params[:tag]
@@ -51,5 +52,10 @@ class PostsController < ApplicationController
 
 	def find_post
 		@post = Post.friendly.find(params[:id])
+	end
+
+	def log_impression
+	  @post = Post.friendly.find(params[:id])
+	  @post.impressions.create(ip_address: request.remote_ip)
 	end
 end
