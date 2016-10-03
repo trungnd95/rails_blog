@@ -268,6 +268,7 @@ hr {
 			text-align: center;
 		}
 	}
+
 }
 
 .page_title {
@@ -285,6 +286,13 @@ hr {
 }
 
 .card-post {
+	opacity: 0;
+	transform: translateX(30px);
+	transition: all 1.5s ease-in-out;
+	&.is-showing {
+		opacity: 1;
+		transform: translateX(0px);
+	}
 	.card-header {
 		background-color: transparent;
 		.post-title-link {

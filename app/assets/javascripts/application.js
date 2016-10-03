@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
-
+//= require landing_post
 
 var img = document.getElementsByClassName('header-background');
 
