@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
 
   has_many :taggings
   has_many :tags, through: :taggings
+  has_many :comments, dependent: :destroy
 
   def all_tags=datas
     self.tags =  datas.split(',').map do |data|
@@ -17,5 +18,14 @@ class Post < ActiveRecord::Base
 
   def self.tagged_with(name)
     Tag.find_by(name: name).posts
+  end
+
+  def count_comment
+    comments =  self.comments.count
+    if comments <= 1
+      comments.to_s + " comment"
+    else
+      comments.to_s + " comments"
+    end
   end
 end

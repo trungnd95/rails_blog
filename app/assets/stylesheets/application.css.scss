@@ -190,8 +190,8 @@ hr {
 		// height: 120px;
 		position: absolute;
 		z-index: 15;
-		top: 425px;
-		background: $white;
+		top: 420px;
+		background: #1abc9c;
 		margin-bottom: 20px;
 		border-bottom: 2px solid $border;
 		.name {
@@ -268,6 +268,32 @@ hr {
 			text-align: center;
 		}
 	}
+	#main_footer {
+		margin-top: 5rem;
+		padding: 2.5em 5%;
+		border-top: 4px solid #3498db;
+		background-color: #30292b;
+		.copyright {
+			float: left;
+			font-size: .9em !important;
+			margin: 0;
+		}
+		nav {
+			text-align:center;
+			i {
+				color: $white;
+				margin-left: 1em;
+				padding-top: .2em;
+				&:hover {
+					color: $highlight;
+				}
+			}
+			p {
+				color: $white;
+			}
+		}
+	}
+
 
 }
 
@@ -307,26 +333,30 @@ hr {
 	}
 
 }
-#main_footer {
-	padding: 2.5em 5%;
-	border-top: 1px solid $border;
-	.copyright {
-		float: left;
-		font-size: .9em !important;
-		margin: 0;
-	}
-	nav {
-		text-align:center;
-		i {
-			color: $dark;
-			margin-left: 1em;
-			padding-top: .2em;
-			&:hover {
-				color: $highlight;
-			}
+
+textarea.content-post {
+	min-height: 20em;
+}
+.comments {
+	.comment {
+		background-color: #f7f7f9;
+		padding: 0.5rem 2rem;
+		border: 1px solid $border;
+		border-radius: 5px;
+		margin-top: 1rem;
+		p:nth-child(2) {
+			padding-left: 2rem;
 		}
 	}
 }
+.leave-comment {
+	padding-top: 2rem;
+	border-top: 1px solid $border;
+	.common-post {
+		height: 100px ;
+	}
+}
+
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
@@ -337,9 +367,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 	margin: .5em 0 2em 0;
 }
 
-textarea {
-	min-height: 20em;
-}
+// textarea {
+// 	min-height: 20em;
+// }
 
 input[type="submit"], .button {
 	outline: none;

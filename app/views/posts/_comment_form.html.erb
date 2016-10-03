@@ -1,0 +1,17 @@
+<h5>Leave Comment</h5>
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :post_id , value: @post.id %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name, placeholder: "Person's name ... " %>
+
+  <br>
+  <br>
+
+  <%= f.label :content %><br>
+  <%= f.text_area :content, placeholder: "Write your comment here", class: "common-post" %>
+
+  <br/>
+  <br>
+  <%= f.submit %>
+
+<% end %>

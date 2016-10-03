@@ -34,9 +34,19 @@
     <!-- Google Plus -->
     <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
 	</div>
-
 	<hr>
-
-	<%= render 'disqus' %>
+	<div class="comments">
+		<h5 class="comments_number"><%= @post.count_comment %></h5>
+		<% @post.comments.each do |comment| %>
+			<div class="comment">
+				<p><strong><%= comment.name %> say ...</strong></p>
+				<p><%=  comment.content %></p>
+			</div>
+		<% end %>
+	</div>
+	<hr>
+	<div class="leave-comment">
+		<%= render 'comment_form' %>
+	</div>
 
 </div>

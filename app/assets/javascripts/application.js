@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+//= require comments
 //= require landing_post
 
 var img = document.getElementsByClassName('header-background');
@@ -29,7 +30,7 @@ function initParallax()
   }
   else {
     navBar.style.position = "absolute";
-    navBar.style.top = '425px';
+    navBar.style.top = '420px';
   }
   // console.log(img[0].style.height);
   img[0].style.top = -(window.pageYOffset / 10) + 'px';
