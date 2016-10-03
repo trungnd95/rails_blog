@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= t "layout.head.title" %></title>
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header id="main_navigation" class="clearfix">
+		<div id="header-image">
+			<%= image_tag("header-image.jpg", class: "header-background")%>
+		</div>
+		<!-- <div class="clearfix"></div> -->
+		<div id="navbar">
+			<%= link_to "Trung Nguyen", root_path, class: "name" %>
+			<nav>
+				<%= link_to "Articles", posts_path %>
+				<%= link_to "Contact", new_contact_path %>
+				<% if user_signed_in? %>
+					<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+				<% end %>
+			</nav>
+		</div>
+	</header>
+	<div id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div id="sidebar">
+						<div class="profile">
+							<h2 class="page_title text-center">Author</h2>
+							<div class="card">
+								<%= image_tag('author.jpg', class: 'card-img-top author-avatar')%>
+								<div class="card-block">
+									<h4 class="card-title text-center">Trung Nguyen</h4>
+									<p class="card-text">VNU, UET - Information Techologoy Faculty </p><br/>
+									<p>Like web technology, data science, play sports, reading books,... </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="tags">
+						<div class="card">
+							<div class="card-header">
+								<h6 class="text-center">Tags</h6>
+							</div>
+							<div class="card-block">
+								<% Tag.all.each do |tag| %>
+									<%= link_to tag.name, tag, class: "tag_sidebar" %>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-offset-1">
+					<% if notice %>
+						<p class="notice"><%= notice %></p>
+					<% elsif alert %>
+						<p class="alert"><%= alert %></p>
+					<% end %>
+
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="main_footer">
+		<nav>
+			<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://facebook.com/trungnd8895" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="http://github.com/trungnd95" target="_blank"><i class="fa fa-github"></i></a>
+		</nav>
+	</footer>
+
+</body>
+</html>

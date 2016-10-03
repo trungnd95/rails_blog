@@ -1,0 +1,35 @@
+<h2 class="page_title">Stuff I've Written</h2>
+
+<!-- <div id="posts_wrapper" class="skinny_wrapper"> -->
+  <div class="row">
+
+
+
+    <% @posts.each do |post| %>
+      <div class="col-md-6">
+        <div class="card text-xs-center card-post">
+          <div class="card-header">
+            <%= link_to post.title, post, class: "post-title-link" %>
+          </div>
+          <div class="card-block">
+            <p class="card-text">
+              <%= truncate(markdown(post.content), length: 50) %> ....
+            </p>
+            <%= link_to "Read more", post, class: "read-more pull-right" %>
+            <div class="clearfix"></div>
+            <hr class="text-center" />
+            <p>
+              <span class="text-strong">Tags: </span><%= raw tag_links(post.all_tags) %>
+            </p>
+          </div>
+          <div class="card-footer text-muted">
+            <%= post.created_at.strftime('%A, %B %d') %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+<!-- </div> -->
+
+<%= will_paginate @posts %>

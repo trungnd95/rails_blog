@@ -1,0 +1,42 @@
+<h2 class="page_title">Content Post</h2>
+<div id="post_show_content">
+	<header>
+		<h2><%= @post.title %></h2>
+		<div class="date">
+			<span class="data_show_post">
+				<%= @post.created_at.strftime('%A, %B %d') %>
+			</span>
+		</div>
+	</header>
+
+	<div id="content">
+		<%= markdown @post.content %>
+	</div>
+	<hr />
+	<div id="tag">
+		<span>Tags: </span><%= raw tag_links(@post.all_tags) %>
+	</div>
+	<% if user_signed_in? %>
+		<div id="admin_links">
+			<%= link_to "Edit Article", edit_post_path(@post) %>
+			<%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	<% end %>
+
+	<hr>
+
+	<div id="share_box">
+		<p>Share</p>
+		<!-- Twitter -->
+    <a onclick="javascript:window.open('http://twitter.com"><i class="fa fa-twitter"></i></a>
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+    <!-- Google Plus -->
+    <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+	</div>
+
+	<hr>
+
+	<%= render 'disqus' %>
+
+</div>

@@ -1,0 +1,7 @@
+en:
+  layout:
+    head:
+      title: "Trung Nguyen -  Coder School"
+  views:
+    contacts:
+      sayhello: "Feel free to drop me email !"
