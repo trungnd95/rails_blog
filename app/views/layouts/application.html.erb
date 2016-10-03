@@ -26,8 +26,16 @@
 		</div>
 	</header>
 	<div class="clearfix"></div>
+
 	<div id="main-content">
 		<div class="container">
+			<div class="row pull-right">
+				<%= search_form_for @q, url: posts_path do |f| %>
+				  <%= f.search_field :title_cont, placeholder: "Search here ..." %>
+				  <%= f.submit "Search", class: "submit-search" %>
+				<% end %>
+			</div>
+			<div class="clearfix"></div>
 			<div class="row">
 				<div class="col-md-3">
 					<div id="sidebar">
