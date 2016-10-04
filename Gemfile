@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'mail_form', '~> 1.5.1'
 gem 'devise', '~> 3.4.1'
 gem 'ransack'
+gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 group :development, :test do
@@ -30,8 +31,4 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
-end
-
-source 'http://insecure.rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.1.0'
 end

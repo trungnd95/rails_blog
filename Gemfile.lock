@@ -1,6 +1,5 @@
 GEM
   remote: http://rubygems.org/
-  remote: http://insecure.rails-assets.org/
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -210,7 +209,7 @@ DEPENDENCIES
   pg
   pygments.rb (~> 0.6.0)
   rails (= 4.2.6)
-  rails-assets-tether (>= 1.1.0)!
+  rails-assets-tether (~> 1.1, >= 1.1.1)
   rails_12factor
   ransack
   redcarpet (~> 3.2.2)
