@@ -31,10 +31,12 @@ URL: **[Application in Heroku](trung-prework-blog.herokuapp.com)**
     - .....
 
 ##Video Walkthrough
+![Video Walkthrough](/app/assets/images/walkthrough.gif)
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Difficulty
 -Deploy on production environment: Javascript isn't working perfectly.
-I can understand why javascript doesn't run, although it was precompiled successfully. 
+I cann't understand why javascript doesn't run, although it was precompiled successfully. 
 I was tried many different way. But it is still not run.
 You can clone my project on Github respository and bundle to run it on local environtment. So you can check its functionality, otherwise on heroku have some thing wrong and it doesn't work correctly. 
     *Not javascript* => *Not parallax effect, not lazy show post(post only load when we sroll), not comment on post(because i used ajax to handle comment post)*

@@ -254,6 +254,12 @@ hr {
 	}
 }
 
+.sign_up_user, .post_new {
+	padding: 2rem;
+	background-color: $white;
+	border: 1px solid $border;
+}
+
 #main-content {
 	position: relative;
 	z-index: 10;

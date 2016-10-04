@@ -5,12 +5,6 @@
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track": true %>
-	<% content_for :javascript_includes do %>
-  	<%= javascript_include_tag "parallax.js" %>
-  	<%= javascript_include_tag "landing_post.js" %>
-  	<%= javascript_include_tag "comments.js" %>
-	<% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -64,7 +58,7 @@
 							</div>
 							<div class="card-block">
 								<% Tag.all.each do |tag| %>
-									<%= link_to tag.name, tag, class: "tag_sidebar" %>
+									<%= link_to tag.name, tag_path(tag.name), class: "tag_sidebar" %>
 								<% end %>
 							</div>
 						</div>

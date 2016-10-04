@@ -1,5 +1,4 @@
-$(window).load(function(){
-  alert(1);
+$(document).ready(function(){
   var img = document.getElementsByClassName('header-background');
   function initParallax()
   {

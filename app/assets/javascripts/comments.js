@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).ready(function(){
   var comments =  $('.comments_number').html();
   $('#new_comment').on('submit', function(e){
     e.preventDefault();

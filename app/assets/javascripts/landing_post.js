@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).ready(function(){
   $(window).scroll(function(){
     var wScroll  = $(this).scrollTop();
     if(wScroll > $('#main-content').offset().top - ($(window).height() / 1.2)){
