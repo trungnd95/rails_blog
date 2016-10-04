@@ -1,9 +1,10 @@
 #Pre-work -  *Trung Manucian Blog*
 
-**Trung Manucian Blog ** is a Ruby on Rails Blog Application
+**Trung Manucian Blog** is a Ruby on Rails Blog Application
+
 Submitted by: **Trung Nguyen** 
 Time spent **5 days**
-URL: **(trung-prework-blog.herokuapp.com)**
+URL: **[Application in Heroku](trung-prework-blog.herokuapp.com)**
 
 ##User Stories
 * Authentication with Devise gem, only for Admin, Guest don't need auth
