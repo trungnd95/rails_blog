@@ -1,9 +1,11 @@
 #Pre-work -  *Trung Manucian Blog*
 
-**Trung Manucian Blog** is a Ruby on Rails Blog Application
+**Trung Manucian Blog** is a Ruby on Rails Blog Application.
 
-Submitted by: **Trung Nguyen** 
-Time spent **5 days**
+Submitted by: **Trung Nguyen**. 
+
+Time spent **5 days**.
+
 URL: **[Application in Heroku](trung-prework-blog.herokuapp.com)**
 
 ##User Stories
@@ -29,3 +31,10 @@ URL: **[Application in Heroku](trung-prework-blog.herokuapp.com)**
     - .....
 
 ##Video Walkthrough
+
+## Difficulty
+-Deploy on production environment: Javascript isn't working perfectly.
+I can understand why javascript doesn't run, although it was precompiled successfully. 
+I was tried many different way. But it is still not run.
+You can clone my project on Github respository and bundle to run it on local environtment. So you can check its functionality, otherwise on heroku have some thing wrong and it doesn't work correctly. 
+    *Not javascript* => *Not parallax effect, not lazy show post(post only load when we sroll), not comment on post(because i used ajax to handle comment post)*
