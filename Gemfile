@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # ruby '2.3.0'
 
@@ -32,3 +32,6 @@ group :production do
 	gem 'rails_12factor'
 end
 
+source 'http://insecure.rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
